@@ -29,6 +29,7 @@ let ComputedTemplateStringTransform = function(options) {
 
         if(isImportedTemplateString || isConfiguredCallPath) {
           let template = node.arguments[0].value;
+          debugger;
           let parser = new Parser(template);
           return this.replaceWithSourceString(parser.toComputedPropertyString());
         }
